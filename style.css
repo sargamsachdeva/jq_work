@@ -1,0 +1,23 @@
+#list-lines {
+    margin: 0;
+    padding: 0;
+}
+
+#list-lines li {
+    float: left;
+    display: table;
+    width: 33.3334%;
+    list-style-type: none;
+}
+
+#list-lines li img {
+    width: 100%;
+    height: auto;
+}
+
+#list-lines::after {
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+}

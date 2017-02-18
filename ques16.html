@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>exercise16</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+        console.log("hello");
+        $("button").click(function() {
+        // data path
+            $.ajax({url: "demo.txt",type:'GET',success:function(result) {
+               
+                    $("#div1").html(result);             
+                
+            },error:function(){
+                
+            }});
+            console.log("outside ajax");
+            
+        });
+    });
+</script>
+</head>
+<body>
+
+<div id="div1"><h2>jQuery AJAX Change </h2></div>
+
+<button>Get External Content</button>
+
+</body>
+</html>
